@@ -1,9 +1,12 @@
 local ts = require("horizon-extended.treesitter")
+local colors = require("horizon-extended.colors")
 
 local M = {}
 
-M.bg = "#000000"
-M.fg = "#ffffff"
+-- Initialize defaults from the current theme
+local c = colors.setup()
+M.bg = c.bg0
+M.fg = c.fg0
 
 function M.highlight(group, hl)
 	group = ts.get(group)

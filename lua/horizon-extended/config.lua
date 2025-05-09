@@ -1,7 +1,7 @@
 local M = {}
 
 local defaults = {
-	style = "neo",
+	style = "cold",
 	transparent = false,
 	terminal_colors = true,
 	enable_italics = true,

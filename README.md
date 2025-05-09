@@ -5,7 +5,7 @@ Horizon Extended (nvim)
 </h3>
 
 <p align="center">
-Bringing over the <i>mildly</i> popular <a href="https://github.com/lancewilhelm/horizon-extended">Horizon Extended VSCode theme</a> to Neovim.
+Bringing over the <i>mildly</i> popular <a href="https://github.com/lancewilhelm/horizon-extended">Horizon Extended VSCode theme</a> and <a href="https://marketplace.visualstudio.com/items?itemName=icpantsir.cold-horizon-extended">Cold Horizon Extended VSCode theme</a> to Neovim.
 </p>
 
 <p align="center">
@@ -14,6 +14,10 @@ Bringing over the <i>mildly</i> popular <a href="https://github.com/lancewilhelm
 
 # Styles
 
+<details>
+    <summary>cold (default)</summary>
+<img src="./imgs/neo.png"/>
+</details>
 <details>
     <summary>neo</summary>
 <img src="./imgs/neo.png"/>
@@ -30,7 +34,7 @@ Bringing over the <i>mildly</i> popular <a href="https://github.com/lancewilhelm
 *The previews above were taken in Kitty with FiraCode Nerd Font and CaskaydiaCove Nerd Font SemiLight Italic*
 # Features
 
-- Two dark modes (neo being a very slight update to the original VSCode theme), and one light mode
+- Three dark modes (cold being a port of Cold Horizon Extended VSCode theme, neo being a very slight update to the original Horizon VSCode theme), and one light mode
 - Syntatic highlighting via LSP and tree-sitter for most of the popular languages
 - Plugin support for common plugins.
 
@@ -57,7 +61,7 @@ There is no need to call setup if you do not want to change the default options 
 
 ```lua
 require("horizon-extended").setup({
-	style = "neo",
+	style = "cold",
 	transparent = false,
 	terminal_colors = true,
 	enable_italics = true,

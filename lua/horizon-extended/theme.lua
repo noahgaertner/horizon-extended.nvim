@@ -424,7 +424,7 @@ function M.setup()
 		NoiceCompletionItemKindTypeParameter = { fg = c.green1, bg = c.none },
 		NoiceCompletionItemKindEnumMember = { fg = c.green1, bg = c.none },
 		NoiceCompletionItemKindOperator = { fg = c.green1, bg = c.none },
-		NoiceCompletionItemKindSnippet = { fg = "BLACK", bg = c.none },
+		NoiceCompletionItemKindSnippet = { fg = c.bg0, bg = c.none },
 
 		-- Undotree
 		UndotreeTimeStamp = { fg = c.yellow },

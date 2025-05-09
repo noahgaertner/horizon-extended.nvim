@@ -21,8 +21,10 @@ M.tempo = {
 	peach = hsl(25, 70, 79),
 	yellow = hsl(39, 80, 76),
 	green = hsl(98, 50, 65),
+	green1 = hsl(98, 60, 70),
 	blue = hsl(185, 45, 55),
 	purple = hsl(279, 55, 65),
+	violet = hsl(279, 60, 70),
 	reddim = hsl(350, 50, 68),
 	orangedim = hsl(9, 60, 73),
 	peachdim = hsl(25, 60, 79),
@@ -35,6 +37,7 @@ M.tempo = {
 	difftext = hsl(38, 30, 25),
 	diffdelete = hsl(350, 30, 17),
 	markline = hsl(279, 30, 20),
+	hint = hsl(98, 60, 65),
 	none = "NONE",
 }
 
@@ -57,8 +60,10 @@ M.neo = {
 	peach = hsl(25, 70, 79),
 	yellow = hsl(39, 80, 76),
 	green = hsl(98, 50, 65),
+	green1 = hsl(98, 60, 70),
 	blue = hsl(185, 45, 55),
 	purple = hsl(279, 55, 65),
+	violet = hsl(279, 60, 70),
 	reddim = hsl(350, 50, 68),
 	orangedim = hsl(9, 60, 73),
 	peachdim = hsl(25, 60, 79),
@@ -71,6 +76,46 @@ M.neo = {
 	difftext = hsl(38, 30, 25),
 	diffdelete = hsl(350, 30, 17),
 	markline = hsl(279, 30, 20),
+	hint = hsl(98, 60, 65),
+	none = "NONE",
+}
+
+-- @class Cold Horizon Extended Color Palette
+M.cold = {
+	bg0 = "#1C1E26",      -- Main background
+	bg1 = "#20232b",      -- Sidebar background
+	bg2 = "#2E303E",      -- UI elements background
+	bg3 = "#232530",      -- Widgets background
+	bg4 = "#16161C",      -- Shadow background
+	fg0 = "#FFFFFF",      -- Main foreground
+	fg1 = "#FFFFFF80",    -- Dimmed foreground
+	fg2 = "#FFFFFF60",    -- More dimmed foreground
+	mg0 = "#6C6F93",      -- Main accent
+	mg1 = "#959595",      -- Comments
+	mg2 = "#6C6F934D",    -- Borders
+	mg3 = "#2E303E99",    -- Indent guides
+	red = "#F43E5C",      -- Error red
+	orange = "#F09483",   -- Orange accent
+	peach = "#f9ca99",    -- Peach/String color
+	yellow = "#FAB795",   -- Yellow accent
+	green = "#14D386",    -- Function name green
+	green1 = "#09F7A0",   -- Additional green color
+	blue = "#30AAD7",     -- Blue accent
+	purple = "#B877DB",   -- Purple accent
+	violet = "#C287FF",   -- Additional purple/violet color
+	reddim = "#E06783",   -- Dimmed red
+	orangedim = "#F09483", -- Dimmed orange
+	peachdim = "#f9ca99", -- Dimmed peach
+	yellowdim = "#FAB795", -- Dimmed yellow
+	greendim = "#09F7A0", -- Dimmed green
+	bluedim = "#56C2EA",  -- Focus border blue
+	purpledim = "#B877DB", -- Dimmed purple
+	diffadd = "#09F7A01A", -- Diff add background
+	diffchange = "#21BFC2B3", -- Diff change background
+	difftext = "#21BFC299", -- Diff text foreground
+	diffdelete = "#F43E5C1A", -- Diff delete background
+	markline = "#1b2947",  -- Current line highlight
+	hint = "#14D386",     -- Hint color
 	none = "NONE",
 }
 
@@ -125,8 +170,10 @@ M.beam = {
 	peach = hsl(25, 70, 79),
 	yellow = hsl(39, 80, 76),
 	green = hsl(98, 50, 65),
+	green1 = hsl(98, 60, 70),
 	blue = hsl(185, 45, 55),
 	purple = hsl(279, 55, 65),
+	violet = hsl(279, 60, 70),
 	reddim = hsl(350, 50, 68),
 	orangedim = hsl(9, 60, 73),
 	peachdim = hsl(25, 60, 79),
@@ -139,6 +186,7 @@ M.beam = {
 	difftext = hsl(38, 30, 25),
 	diffdelete = hsl(350, 30, 17),
 	markline = hsl(279, 30, 20),
+	hint = hsl(98, 60, 65),
 	none = "NONE",
 }
 
@@ -161,8 +209,10 @@ M.ray = {
 	peach = hsl(25, 75, 35),
 	yellow = hsl(39, 75, 35),
 	green = hsl(98, 45, 40),
+	green1 = hsl(98, 55, 45),
 	blue = hsl(185, 45, 40),
 	purple = hsl(279, 65, 55),
+	violet = hsl(279, 70, 60),
 	reddim = hsl(350, 65, 55),
 	orangedim = hsl(9, 65, 55),
 	peachdim = hsl(25, 65, 55),
@@ -175,6 +225,7 @@ M.ray = {
 	difftext = hsl(38, 30, 85),
 	diffdelete = hsl(350, 30, 82),
 	markline = hsl(279, 30, 80),
+	hint = hsl(98, 55, 50),
 	none = "NONE",
 }
 
@@ -182,11 +233,13 @@ function M.setup(opts)
 	opts = opts or {}
 	local config = require("horizon-extended.config")
 
-	local palette = M.neo
+	local palette = M.cold  -- Default to the Cold Horizon Extended palette
 	if config.options.style == "tempo" or config.options.style == "Tempo" then
 		palette = M.tempo
 	elseif config.options.style == "neo" or config.options.style == "Neo" then
 		palette = M.neo
+	elseif config.options.style == "cold" or config.options.style == "Cold" then
+		palette = M.cold
 	elseif config.options.style == "beam" or config.options.style == "Beam" then
 		palette = M.beam
 	elseif config.options.style == "ray" or config.options.style == "Ray" then
