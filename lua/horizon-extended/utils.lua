@@ -8,11 +8,21 @@ local c = colors.setup()
 M.bg = c.bg0
 M.fg = c.fg0
 
+-- Function to strip alpha channel from hex colors
+local function strip_alpha(color)
+	if type(color) == "string" and color:match("^#%x%x%x%x%x%x%x%x$") then
+		return color:sub(1, 7)  -- Return only the RGB part (#RRGGBB)
+	end
+	return color
+end
+
 function M.highlight(group, hl)
 	group = ts.get(group)
 	if not group then
 		return
 	end
+	
+	-- Process style
 	if hl.style then
 		if type(hl.style) == "table" then
 			hl = vim.tbl_extend("force", hl, hl.style)
@@ -24,6 +34,12 @@ function M.highlight(group, hl)
 		end
 		hl.style = nil
 	end
+	
+	-- Remove alpha channel from colors
+	if hl.fg then hl.fg = strip_alpha(hl.fg) end
+	if hl.bg then hl.bg = strip_alpha(hl.bg) end
+	if hl.sp then hl.sp = strip_alpha(hl.sp) end
+	
 	vim.api.nvim_set_hl(0, group, hl)
 end
 
