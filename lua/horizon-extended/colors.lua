@@ -2,8 +2,9 @@ local hslutil = require("horizon-extended.hsl")
 local hsl = hslutil.hslToHex
 local M = {}
 
--- @class Neo Color Palette
+-- @class Tempo Color Palette
 M.tempo = {
+	-- Base colors
 	bg0 = "#1C1E26",
 	bg1 = hsl(228, 15, 13),
 	bg2 = hsl(228, 15, 11),
@@ -39,10 +40,23 @@ M.tempo = {
 	markline = hsl(279, 30, 20),
 	hint = hsl(98, 60, 65),
 	none = "NONE",
+	
+	-- Semantic colors
+	accent = hsl(185, 45, 55),      -- Primary accent color (blue)
+	accent_dim = hsl(185, 50, 44),  -- Dimmed accent color (bluedim)
+	error = hsl(350, 85, 68),       -- Error color (red)
+	warning = hsl(39, 80, 76),      -- Warning color (yellow)
+	success = hsl(98, 50, 65),      -- Success color (green)
+	info = hsl(185, 45, 55),        -- Information color (blue)
+	heading = hsl(185, 45, 55),     -- Heading color (blue)
+	border = hsl(228, 15, 30),      -- Border color (mg2)
+	dashboard = hsl(185, 45, 55),   -- Dashboard accent color (blue)
+	link = hsl(185, 45, 55),        -- Link color (blue)
 }
 
 -- @class Neo Color Palette
 M.neo = {
+	-- Base colors
 	bg0 = hsl(228, 15, 15),
 	bg1 = hsl(228, 15, 13),
 	bg2 = hsl(228, 15, 11),
@@ -78,10 +92,23 @@ M.neo = {
 	markline = hsl(279, 30, 20),
 	hint = hsl(98, 60, 65),
 	none = "NONE",
+	
+	-- Semantic colors
+	accent = hsl(279, 55, 65),      -- Primary accent color (purple)
+	accent_dim = hsl(279, 30, 66),  -- Dimmed accent color (purpledim)
+	error = hsl(350, 85, 68),       -- Error color (red)
+	warning = hsl(39, 80, 76),      -- Warning color (yellow)
+	success = hsl(98, 50, 65),      -- Success color (green)
+	info = hsl(185, 45, 55),        -- Information color (blue)
+	heading = hsl(279, 55, 65),     -- Heading color (purple)
+	border = hsl(228, 15, 30),      -- Border color (mg2)
+	dashboard = hsl(279, 55, 65),   -- Dashboard accent color (purple)
+	link = hsl(279, 55, 65),        -- Link color (purple)
 }
 
 -- @class Cold Horizon Extended Color Palette
 M.cold = {
+	-- Base colors
 	bg0 = "#1C1E26",      -- Main background
 	bg1 = "#20232b",      -- Sidebar background
 	bg2 = "#2E303E",      -- UI elements background
@@ -117,42 +144,23 @@ M.cold = {
 	markline = "#1b2947",  -- Current line highlight
 	hint = "#14D386",     -- Hint color
 	none = "NONE",
+	
+	-- Semantic colors
+	accent = "#30AAD7",     -- Primary accent color (blue)
+	accent_dim = "#56C2EA", -- Dimmed accent color (bluedim)
+	error = "#F43E5C",      -- Error color (red)
+	warning = "#FAB795",    -- Warning color (yellow)
+	success = "#14D386",    -- Success color (green)
+	info = "#30AAD7",       -- Information color (blue)
+	heading = "#56C2EA",    -- Heading color (bluedim)
+	border = "#6C6F934D",   -- Border color (mg2)
+	dashboard = "#30AAD7",  -- Dashboard accent color (blue)
+	link = "#56C2EA",       -- Link color (bluedim)
 }
-
--- bg0	#23252f
--- bg1	#1c1e26
--- bg2	#181a20
--- bg3	#14151a
--- bg4	#0f1015
--- fg0	#d3d5de
--- fg1	#b6bac9
--- fg2	#989eb3
--- mg0	#6c7493
--- mg1	#575d75
--- mg2	#414658
--- mg3	#2b2e3b
--- red	#f3687f
--- orange	#ea988a
--- peach	#efc3a4
--- yellow	#f3d091
--- green	#9ad279
--- blue	#59b7c0
--- purple	#b475d7
--- reddim	#d68592
--- orangedim	#e39d91
--- peachdim	#eac4a9
--- yellowdim	#e0cba3
--- greendim	#9fc18b
--- bluedim	#389fa8
--- purpledim	#b08ec2
--- diffadd	#28381e
--- diffchange	#382f1e
--- difftext	#53452d
--- diffdelete	#381e23
--- markline	#382442
 
 -- @class Beam Color Palette
 M.beam = {
+	-- Base colors
 	bg0 = hsl(228, 15, 20),
 	bg1 = hsl(228, 15, 18),
 	bg2 = hsl(228, 15, 16),
@@ -188,10 +196,23 @@ M.beam = {
 	markline = hsl(279, 30, 20),
 	hint = hsl(98, 60, 65),
 	none = "NONE",
+	
+	-- Semantic colors
+	accent = hsl(185, 45, 55),      -- Primary accent color (blue)
+	accent_dim = hsl(185, 50, 44),  -- Dimmed accent color (bluedim)
+	error = hsl(350, 85, 68),       -- Error color (red)
+	warning = hsl(39, 80, 76),      -- Warning color (yellow)
+	success = hsl(98, 50, 65),      -- Success color (green)
+	info = hsl(185, 45, 55),        -- Information color (blue)
+	heading = hsl(185, 45, 55),     -- Heading color (blue)
+	border = hsl(228, 15, 40),      -- Border color (mg2)
+	dashboard = hsl(185, 45, 55),   -- Dashboard accent color (blue)
+	link = hsl(185, 45, 55),        -- Link color (blue)
 }
 
 -- @class Ray Color Palette
 M.ray = {
+	-- Base colors
 	bg0 = hsl(228, 15, 90),
 	bg1 = hsl(228, 15, 85),
 	bg2 = hsl(228, 15, 80),
@@ -227,6 +248,18 @@ M.ray = {
 	markline = hsl(279, 30, 80),
 	hint = hsl(98, 55, 50),
 	none = "NONE",
+	
+	-- Semantic colors
+	accent = hsl(98, 45, 40),       -- Primary accent color (green)
+	accent_dim = hsl(98, 45, 50),   -- Dimmed accent color (greendim)
+	error = hsl(350, 75, 45),       -- Error color (red)
+	warning = hsl(39, 75, 35),      -- Warning color (yellow)
+	success = hsl(98, 45, 40),      -- Success color (green)
+	info = hsl(185, 45, 40),        -- Information color (blue)
+	heading = hsl(98, 45, 40),      -- Heading color (green)
+	border = hsl(228, 15, 70),      -- Border color (mg2)
+	dashboard = hsl(98, 45, 40),    -- Dashboard accent color (green)
+	link = hsl(98, 45, 40),         -- Link color (green)
 }
 
 function M.setup(opts)
